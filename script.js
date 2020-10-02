@@ -3,24 +3,24 @@
 
 let gridDim = 16;
 
-
-
-
 function createDiv () {
- 
+    let divSuffix = 1;
     //div held in gridDiv
 let gridDiv = document.createElement("div");
-gridDiv.setAttribute("id", "div"+i);
+gridDiv.setAttribute("class", "grid-item");
 // text content for div.
-let divContent = document.createTextNode("div test");
+//let divContent = document.createTextNode("div test");
     //add gridDiv to divContent
-    gridDiv.appendChild(divContent);
+   // gridDiv.appendChild(divContent);
     let element = document.getElementById("mainDiv");
     element.appendChild(gridDiv);
 };
 
-function buildGrid () {
-    for (let i = 0; i < gridDim * gridDim; i++) {
+function buildGrid() {
+    for (let i = 0; i < gridDim + gridDim; i++) {
     createDiv();
+    console.log(i);
     
-    };
+    }
+    
+};
