@@ -13,8 +13,9 @@ gridDiv.setAttribute("class", 'grid-item'+divSuffix);
 let divContent = document.createTextNode("div test "+divSuffix);
     //add gridDiv to divContent
     gridDiv.appendChild(divContent);
-    let element = document.getElementById("mainDiv");
+    let element =  document.getElementsByClassName("grid-container")[0];
     element.appendChild(gridDiv);
+  
 };
 
 function buildGrid() {

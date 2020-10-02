@@ -1,4 +1,9 @@
-#mainDiv {
-
+.grid-container {
     display: grid;
+    grid-template-columns:  50%;
+};
+
+div {
+    padding:1;
+    background: #eeeeee;
 }
