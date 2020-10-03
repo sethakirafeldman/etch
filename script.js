@@ -9,19 +9,19 @@ function createDiv () {
     //div held in gridDiv
 let gridDiv = document.createElement("div");
 gridDiv.setAttribute("class", 'grid-item'+divSuffix);
-// text content for div.
-let divContent = document.createTextNode("div test "+divSuffix);
+// text content for div. hid text as it is now working.
+//let divContent = document.createTextNode("div test "+divSuffix);
     //add gridDiv to divContent
-    gridDiv.appendChild(divContent);
+    //gridDiv.appendChild(divContent);
     let element =  document.getElementsByClassName("grid-container")[0];
     element.appendChild(gridDiv);
   
 };
 
 function buildGrid() {
-    for (let i = 0; i < gridDim * 2; i++) {
+    for (let i = 0; i < gridDim * 16; i++) {
     createDiv();
-    console.log(i);
+    //console.log(i);
     
     }
     

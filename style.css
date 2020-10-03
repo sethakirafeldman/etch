@@ -1,19 +1,12 @@
-body {
 
-
-}
 .grid-container {
     max-width: 100%;
-
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto;
-    justify-items: center;
-
-    grid-gap: 2em;
-
+    grid-template-columns: repeat(16, 50px);
+    grid-template-rows: repeat(16, 50px);
     background: #eeeeee;
 }
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
 https://css-tricks.com/snippets/css/complete-guide-grid/#prop-display
+*/
