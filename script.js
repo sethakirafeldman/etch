@@ -8,7 +8,7 @@ function createDiv () {
     let divSuffix = num++;
     //div held in gridDiv
 let gridDiv = document.createElement("div");
-gridDiv.setAttribute("class", 'grid-item'+divSuffix);
+gridDiv.setAttribute("class", 'grid-item onmouseenter="hoverMouse()'+divSuffix);
 // text content for div. hid text as it is now working.
 //let divContent = document.createTextNode("div test "+divSuffix);
     //add gridDiv to divContent
@@ -26,3 +26,6 @@ function buildGrid() {
     }
     
 };
+
+function hoverMouse() {
+    document.getElementsByClassName("grid-item1").style.colour="red";  }
