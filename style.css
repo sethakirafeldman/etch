@@ -5,7 +5,17 @@
     grid-template-columns: repeat(16, 50px);
     grid-template-rows: repeat(16, 50px);
     background: #eeeeee;
+    row-gap: 2.5px;
+    column-gap: 2.5px;
+
+    }
+
+.active-item {
+    
+    background-color: orange;
+
 }
+
 
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
 https://css-tricks.com/snippets/css/complete-guide-grid/#prop-display

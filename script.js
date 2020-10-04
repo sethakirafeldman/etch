@@ -5,18 +5,17 @@ let gridDim = 16;
 let num = 0;
 
 function createDiv () {
-    let divSuffix = num++;
+    let divSuffix = " " + num++;
     //div held in gridDiv
-let gridDiv = document.createElement("div");
-gridDiv.setAttribute("class", 'grid-item onmouseenter="hoverMouse()'+divSuffix);
-// text content for div. hid text as it is now working.
-//let divContent = document.createTextNode("div test "+divSuffix);
-    //add gridDiv to divContent
-    //gridDiv.appendChild(divContent);
-    let element =  document.getElementsByClassName("grid-container")[0];
+    let gridDiv = document.createElement("div");
+    gridDiv.setAttribute("class", 'grid-item'+divSuffix);
+    gridDiv.style.backgroundColor="blue";
+    let element = document.getElementsByClassName("grid-container")[0];
     element.appendChild(gridDiv);
   
 };
+
+
 
 function buildGrid() {
     for (let i = 0; i < gridDim * 16; i++) {
@@ -27,5 +26,9 @@ function buildGrid() {
     
 };
 
-function hoverMouse() {
-    document.getElementsByClassName("grid-item1").style.colour="red";  }
+function colorSquare() {
+gridDiv.onmouseover=console.log("mousingover");
+gridDiv.onmouseover="colorSquare()";
+gridDiv.setAttribute("class",'active-item');
+};
+//document.addEventListener("mouseenter", ();
