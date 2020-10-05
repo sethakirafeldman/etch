@@ -4,17 +4,18 @@
 let gridDim = 16;
 let num = 0;
 
+
 function createDiv () {
-    let divSuffix = " " + num++;
+    let divSuffix = "-" + num++;
     //div held in gridDiv
     let gridDiv = document.createElement("div");
-    gridDiv.setAttribute("class", 'grid-item'+divSuffix);
+    gridDiv.setAttribute("class", 'grid-item');
     gridDiv.style.backgroundColor="blue";
     let element = document.getElementsByClassName("grid-container")[0];
     element.appendChild(gridDiv);
+   
+        };
   
-};
-
 
 
 function buildGrid() {
@@ -24,11 +25,12 @@ function buildGrid() {
     
     }
     
+
+    document.getElementsByClassName("grid-item").onmouseenter = changeColor();
+    function changeColor() {
+    gridDiv.style.backgroundColor="orange" 
 };
 
-function colorSquare() {
-gridDiv.onmouseover=console.log("mousingover");
-gridDiv.onmouseover="colorSquare()";
-gridDiv.setAttribute("class",'active-item');
-};
-//document.addEventListener("mouseenter", ();
+
+ };
+    

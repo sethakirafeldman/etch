@@ -10,11 +10,9 @@
 
     }
 
-.active-item {
-    
-    background-color: orange;
-
-}
+    .grid-item:hover{
+        color: black;
+      }
 
 
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
