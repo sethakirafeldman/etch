@@ -21,16 +21,24 @@ function buildGrid() {
     createDiv();
     //console.log(i);
     
-    }
-    
+    }; 
 
-    document.querySelector('.grid-container').addEventListener('mouseover', hoverMouse);
-
-        function hoverMouse() { 
-        
-        document.getElementById('grid-item').style.backgroundColor = "green";
+/*    
+let test = document.getElementsByClassName('grid-container');
+    test.addEventListener('mouseenter', hoverMouse(event) ) { 
+        event.target.style.backgroundColor="green"; }
+       // document.getElementById('grid-item').style.backgroundColor = "green";
         console.log("hoveringTest");
-    };
+    }; */
+
+    document.getElementsByClassName("grid-container").onmouseover = function() {mouseOver()};
+
+    function mouseOver() {
+        document.getElementById("demo").style.color = "red";
+        console.log("mousingoverlog");
+      }
+      
+
       
     //square changes color when any part of grid is touched, and only one square is affected. look into targetting each id/class when hovering specifically.    
 
