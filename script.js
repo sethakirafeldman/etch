@@ -4,6 +4,14 @@
 let gridDim = 16;
 let num = 0;
 
+//close. not changing colour still.
+function hoverFunction() {
+    //document.getElementById("grid-item").style.backgroundcolor = "red";
+    document.getElementById("grid-item").backgroundColor = "green";
+    console.log("mousingoverlog");
+
+  };
+  
 function buildGrid() {
     for (let i = 0; i < gridDim * 16; i++) {
     createDiv();
@@ -12,14 +20,15 @@ function buildGrid() {
     }; 
 
 function createDiv () {
-    //let divSuffix = "-" + num++;
+    let divSuffix = "-" + num++;
     //div held in gridDiv
     let gridDiv = document.createElement("div");
     gridDiv.setAttribute("id", 'grid-item');
-    gridDiv.style.backgroundColor="blue";
+    gridDiv.setAttribute("onmouseover", "hoverFunction()")
+    gridDiv.style.backgroundColor="white";
     let element = document.getElementsByClassName("grid-container")[0];
     element.appendChild(gridDiv);
-   
+    
         };
   
 
@@ -31,13 +40,8 @@ let test = document.getElementsByClassName('grid-container');
         console.log("hoveringTest");
     }; */
 
-    document.getElementsByClassName("grid-container").onmouseover = function() {mouseOver()};
-
-    function mouseOver() {
-        document.getElementById("demo").style.color = "red";
-        console.log("mousingoverlog");
-      }
-      
+    // on mouseover function
+  
 
       
     //square changes color when any part of grid is touched, and only one square is affected. look into targetting each id/class when hovering specifically.    
