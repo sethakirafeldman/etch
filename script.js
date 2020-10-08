@@ -5,10 +5,11 @@ let gridDim = 16;
 let num = 0;
 
 //close. not changing colour still.
-function hoverFunction() {
+function hoverFunction(hover) {
     //document.getElementById("grid-item").style.backgroundcolor = "red";
     document.getElementById("grid-item").backgroundColor = "green";
     console.log("mousingoverlog");
+    console.log(hover.target.getElementById);
 
   };
   
@@ -32,13 +33,7 @@ function createDiv () {
         };
   
 
-/*    
-let test = document.getElementsByClassName('grid-container');
-    test.addEventListener('mouseenter', hoverMouse(event) ) { 
-        event.target.style.backgroundColor="green"; }
-       // document.getElementById('grid-item').style.backgroundColor = "green";
-        console.log("hoveringTest");
-    }; */
+
 
     // on mouseover function
   
