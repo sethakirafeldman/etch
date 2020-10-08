@@ -4,6 +4,12 @@
 let gridDim = 16;
 let num = 0;
 
+function buildGrid() {
+    for (let i = 0; i < gridDim * 16; i++) {
+    createDiv();
+    //console.log(i);
+    
+    }; 
 
 function createDiv () {
     //let divSuffix = "-" + num++;
@@ -16,12 +22,6 @@ function createDiv () {
    
         };
   
-function buildGrid() {
-    for (let i = 0; i < gridDim * 16; i++) {
-    createDiv();
-    //console.log(i);
-    
-    }; 
 
 /*    
 let test = document.getElementsByClassName('grid-container');

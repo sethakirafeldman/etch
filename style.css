@@ -9,11 +9,6 @@
     column-gap: 2.5px;
 
     }
-#grid-item:hover {
-    background-color: green;
-
-}
-
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
 https://css-tricks.com/snippets/css/complete-guide-grid/#prop-display
 */
