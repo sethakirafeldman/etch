@@ -5,12 +5,13 @@ let gridDim = 16;
 let num = 0;
 let mouseTarget = document.querySelectorAll(':hover');
 
-//close. not changing colour still.
+/*
 function hoverFunction() {
-//    mouseTarget.style.color = "red";    
+    //document.getElementsByClassName("grid-item").id=("colorSquare");
+    document.getElementsByClassName("grid-item").onmousover = this.className='permanent-color';
     console.log("mousingoverlog");
 
-  };
+  }; */
   
 function buildGrid() {
     for (let i = 0; i < gridDim * 16; i++) {
@@ -23,22 +24,23 @@ function createDiv () {
     let divSuffix = "-" + num++;
     //div held in gridDiv
     let gridDiv = document.createElement("div");
-    gridDiv.setAttribute("id", 'grid-item');
-    //gridDiv.setAttribute("onmouseenter", "hoverFunction()")
+    gridDiv.setAttribute("class", 'grid-item');
+    gridDiv.setAttribute("id", "square" + divSuffix);
+    gridDiv.addEventListener("mouseover", permanentColor, true);
+    //gridDiv.setAttribute("onmouseover", "permanentColor()");
     gridDiv.style.backgroundColor="white";
-    let element = document.getElementsByClassName("grid-container")[0];
-    element.appendChild(gridDiv);
+    let divClass = document.getElementsByClassName("grid-container")[0];
+    divClass.appendChild(gridDiv);
     
         };
-  
 
+        //close. not changing colour still.
+function permanentColor() {
+    let gridItem = document.getElementsByClassName("grid-item");
+    gridItem.className="permanent-color";
+    console.log("mousingoverlog");
+};
 
-
-    // on mouseover function
-  
-
-      
-    //square changes color when any part of grid is touched, and only one square is affected. look into targetting each id/class when hovering specifically.    
 
 
  };

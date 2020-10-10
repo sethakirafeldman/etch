@@ -2,8 +2,8 @@
 .grid-container {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(16, 50px);
-    grid-template-rows: repeat(16, 50px);
+    grid-template-columns: repeat(16, 75px);
+    grid-template-rows: repeat(16, 75px);
     background: #eeeeee;
     row-gap: 2.5px;
     column-gap: 2.5px;
@@ -15,10 +15,15 @@
         text-align: center;
     }
 
-    #grid-item:hover {
-background-color: green !important;
-
+    .permanent-color {
+        background-color: green !important;
+        
+            }
+    .grid-item:hover {
+        background-color: green !important;
     }
+
+
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
 https://css-tricks.com/snippets/css/complete-guide-grid/#prop-display
 */
