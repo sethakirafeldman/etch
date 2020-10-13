@@ -36,13 +36,13 @@ function createDiv () {
     //div held in gridDiv
     let gridDiv = document.createElement("div");
     gridDiv.setAttribute("class", 'grid-item');
-    gridDiv.setAttribute("id", "square"+divSuffix);
+    gridDiv.setAttribute("id", "square"+ divSuffix);
     gridDiv.style.backgroundColor="white";
     //gridDiv.setAttribute("onmouseover", "permanentColor()");
     gridDiv.setAttribute("onmouseenter", "getElemId(this)");
     let divClass = document.getElementsByClassName("grid-container")[0];
     divClass.appendChild(gridDiv);
-};
+        };
 
     };
 
