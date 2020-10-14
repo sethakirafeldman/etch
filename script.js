@@ -1,31 +1,32 @@
 // create divs until length is 32. 16 x 16 grid. style divs with css.
 //https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
 
-let gridDimension = 16;
+let value = "16";
+let gridDimensions = value * value;
 let num = 0;
+
+function dimPrompt() {
+    let value = prompt("test", "enter dimensions");
+    let txt;
+        if (value == null || value == "") {
+            txt= "no entry";
+        } else {
+            txt = "You have chosen";
+            console.log(value);
+        }
+        document.getElementById("settings").innerHTML = txt;
+    };
 
 //working
 function getElemId(obj) {
     let selectedSquare = obj;
-    console.log(selectedSquare);
     selectedSquare.setAttribute("class", "permanent-color");
 
     };
-/* did not work. prob can delete. 
-function permanentColor() {
-    const green = "rgb(0, 128, 0)";
-    const cssElement = document.querySelector('.grid-item:hover');
-    let cssStyle = getComputedStyle(cssElement, "::hover").getPropertyValue("background-color");
-    //const cssBackgroundColor = style.backgroundColor;
-        // if background-color is green, change class.
-        if ( cssStyle = green ) {
-            console.log("square is greenTest");
-            document.getElementById("")
-        };
-}; */
+
 //works 
 function buildGrid() {
-    for (let i = 0; i < gridDimension * 16; i++) {
+    for (let i = 0; i < gridDimensions; i++) {
     createDiv();
     //console.log(i);
     
