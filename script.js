@@ -3,7 +3,7 @@
 
 let value = "16";
 let gridDimensions = value * value;
-let num = 0;
+let num = 0
 
 function dimPrompt() {
     let value = prompt("test", "enter dimensions");
@@ -15,6 +15,11 @@ function dimPrompt() {
             console.log(value);
         }
         document.getElementById("settings").innerHTML = txt;
+/*
+            function changeCSS () {
+                document.getElementById("gridID").style.gridTemplateColumns = 
+                document.getElementById("gridID").style.gridTemplateRows =    
+            }; */
     };
 
 //working
