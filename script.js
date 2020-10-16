@@ -5,6 +5,7 @@ let value = "16";
 let gridDimensions = value * value;
 let num = 0
 
+// does not do anything yet. 
 function dimPrompt() {
     let value = prompt("test", "enter dimensions");
     let txt;
@@ -15,12 +16,14 @@ function dimPrompt() {
             console.log(value);
         }
         document.getElementById("settings").innerHTML = txt;
-/*
-            function changeCSS () {
-                document.getElementById("gridID").style.gridTemplateColumns = 
-                document.getElementById("gridID").style.gridTemplateRows =    
-            }; */
     };
+
+// have this function activate a gridbuilding function.
+    function changeCSS () {
+        document.getElementById("gridID").setAttribute("id", "test")
+        //document.getElementById("gridID").style.gridTemplateColumns = 
+        //document.getElementById("gridID").style.gridTemplateRows =    
+    }; 
 
 //working
 function getElemId(obj) {
@@ -29,7 +32,7 @@ function getElemId(obj) {
 
     };
 
-//works 
+//works to create divs. not grid
 function buildGrid() {
     for (let i = 0; i < gridDimensions; i++) {
     createDiv();
