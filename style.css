@@ -5,12 +5,10 @@
 }
 
 .grid-container {
-    height: auto;
-    width: auto;
+    height: 1000px;
+    width: 1000px;
     display: grid;
     max-width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
-    grid-auto-rows: 1fr;
     /*
     grid-template-columns: repeat(16, 25px);
     grid-template-rows: repeat(16, 25px);
@@ -18,11 +16,11 @@
     background: #eeeeee;
     row-gap: 2.5px;
     column-gap: 2.5px;
+    padding-bottom: 100%;
 
     }
 
-    #gridID {
-;        
+
 
     }
     #title {
