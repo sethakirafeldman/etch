@@ -1,26 +1,26 @@
 
+
+:root {
+
+    --grid-template-columns: ;
+    --grid-template-rows: ;
+}
 #settings {
     text-align: center;
 
 }
 
 .grid-container {
-    height: 1000px;
-    width: 1000px;
+
     display: grid;
     max-width: 100%;
-    /*
-    grid-template-columns: repeat(16, 25px);
-    grid-template-rows: repeat(16, 25px);
-    */
+    max-height: 100%;
     background: #eeeeee;
     row-gap: 2.5px;
     column-gap: 2.5px;
     padding-bottom: 100%;
 
     }
-
-
 
     }
     #title {
@@ -38,6 +38,3 @@
     }
 
 
-/*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns
-https://css-tricks.com/snippets/css/complete-guide-grid/#prop-display
-*/

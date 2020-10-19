@@ -3,31 +3,18 @@
 
 let value = "16";
 let gridDimensions = value * value;
-let num = 0
+let num = 0;
 
-
-// does not do anything yet. 
-function dimPrompt() {
-    let value = prompt("enter a number");
-    
-    let txt;
-        if (value == null || value == "") {
-            txt= "no entry";
-
-        } else {
-            txt = "You have chosen " + value + " x " + value ;
-            console.log(value);
-            changeGridSize();
-        }
-        document.getElementById("settings").innerHTML = txt;
-    };
-// have to figure out how to pass variables into the css. 
- function changeGridSize () {
-    value = "";
+// values pass into css @ :root
+ function changeGridSize() {
+    prompt = 16 ;
+    cssDimensions = 'repeat(' + prompt + ', 100px)'; 
+   // cssDimensions = 'repeat(32, 100px)';
     let container = document.getElementById("containerID");
-    container.style.gridTemplateColumns = "repeat(16, 100px)";
-    container.style.gridTemplateRows = "repeat(16, 100px)";  
- };   
+   container.style.setProperty('grid-template-columns', cssDimensions);
+   container.style.setProperty('grid-template-rows', cssDimensions);
+   
+     };   
 
 //changes class of selected div to change color.
 function getElemId(obj) {
