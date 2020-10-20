@@ -4,17 +4,9 @@
 let value = "16";
 let gridDimensions = value * value;
 let num = 0;
+//default dimension value.
 
-// values pass into css @ :root
- function changeGridSize() {
-    prompt = 16 ;
-    cssDimensions = 'repeat(' + prompt + ', 100px)'; 
-   // cssDimensions = 'repeat(32, 100px)';
-    let container = document.getElementById("containerID");
-   container.style.setProperty('grid-template-columns', cssDimensions);
-   container.style.setProperty('grid-template-rows', cssDimensions);
-   
-     };   
+// working, now set input to a maximum of 100
 
 //changes class of selected div to change color.
 function getElemId(obj) {
@@ -38,15 +30,32 @@ function buildGrid() {
         let gridDiv = document.createElement("div");
         gridDiv.setAttribute("class", 'grid-item');
         gridDiv.setAttribute("id", "square"+ divSuffix);
-        changeGridSize();
+        //changeGridSize();
         gridDiv.style.backgroundColor="white";
         gridDiv.setAttribute("onmouseenter", "getElemId(this)");
         let divClass = document.getElementsByClassName("grid-container")[0];
         divClass.appendChild(gridDiv);
             };
 
-    };
+    };    
+       // values pass into css @ :root      
+function getDimensions(value) {
+    // change default to prompt value
+    value = window.prompt("test", "");
+    changeGridSize(value);
+
+};    
+
+function changeGridSize(value) {
+    cssDimensions = 'repeat(' + value + ', 100px)'; 
+// cssDimensions = 'repeat(32, 100px)';
+    let container = document.getElementById("containerID");
+    container.style.setProperty('grid-template-columns', cssDimensions);
+    container.style.setProperty('grid-template-rows', cssDimensions);
+    console.log(cssDimensions);
+    buildGrid(value);
 
 
+};
 
      

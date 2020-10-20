@@ -19,6 +19,8 @@
     row-gap: 2.5px;
     column-gap: 2.5px;
     padding-bottom: 100%;
+    grid-template-columns: repeat(16, 100px);
+    grid-template-rows: repeat(16, 100px);
 
     }
 
