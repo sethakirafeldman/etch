@@ -4,6 +4,7 @@
 let value = "16";
 let gridDimensions = value * value;
 let num = 0;
+
 //default dimension value.
 
 // working, now set input to a maximum of 100
@@ -12,18 +13,16 @@ let num = 0;
 function getElemId(obj) {
     let selectedSquare = obj;
     selectedSquare.setAttribute("class", "permanent-color");
-
     };
 
 //works to create divs. not grid
-function buildGrid() {
+function buildGrid(value) {
     for (let i = 0; i < gridDimensions; i++) {
-    createDiv();
-    //console.log(i);
-
+    createDiv(gridDimensions);
+    
     };
 
-    // creates div in DOM.
+//creates div in DOM.
     function createDiv () {
         let divSuffix = "-" + num++;
         //div held in gridDiv
@@ -40,22 +39,25 @@ function buildGrid() {
     };    
        // values pass into css @ :root      
 function getDimensions(value) {
-    // change default to prompt value
-    value = window.prompt("test", "");
-    changeGridSize(value);
-
+    value = window.prompt("Enter a number", "");
+        if (value <= 100) { 
+        // change default to prompt value
+        //value = window.prompt("test", "");
+        changeGridSize(value);
+        }
+        else {
+            console.log("select a value under 100.")
+        }
 };    
 
 function changeGridSize(value) {
+
     cssDimensions = 'repeat(' + value + ', 100px)'; 
 // cssDimensions = 'repeat(32, 100px)';
     let container = document.getElementById("containerID");
     container.style.setProperty('grid-template-columns', cssDimensions);
     container.style.setProperty('grid-template-rows', cssDimensions);
-    console.log(cssDimensions);
-    buildGrid(value);
-
-
+    buildGrid(value + container);
 };
 
      
