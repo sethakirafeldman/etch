@@ -11,6 +11,10 @@
 
 }
 
+body {
+    background-color: whitesmoke;
+
+}
 h1 {
 
     text-align: center;
@@ -19,19 +23,17 @@ h1 {
 
 .grid-container {
     display: grid;
-    /*max-width: auto;
-    max-height: auto; */
+    max-width: auto;
+    max-height: auto; 
     background: #eeeeee;
     row-gap: 5px;
     column-gap: 5px; 
-    padding-bottom: 25%;
-    grid-template-columns: repeat(16, auto);
-    grid-template-rows: repeat(16, auto); 
-    align-content: center;
-    }
+    grid-template-columns: repeat(16, 25px);
+    grid-template-rows: repeat(16, 25px); 
+    align-self: center;
+}
 
-    .grid
-    }
+
     .permanent-color {
         background-color: green !important;
         
@@ -40,5 +42,4 @@ h1 {
     .grid-item:hover {
         background-color: green !important;
     }
-
 

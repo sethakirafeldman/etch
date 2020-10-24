@@ -7,7 +7,7 @@ let num = 0;
 
 //default dimension value.
 
-// working, now set input to a maximum of 100
+// feeling stuck. going back to tutorials. need to figure out centering grids and grid size constant.
 
 //changes class of selected div to change color.
 function getElemId(obj) {
@@ -19,7 +19,7 @@ function getElemId(obj) {
 function buildDivs() {
     for (let i = 0; i < gridDimensions; i++) {
     createDiv(gridDimensions);
-    
+
     //creates div in DOM.
         function createDiv () {
             let divSuffix = "-" + num++;
