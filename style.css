@@ -1,31 +1,37 @@
 
 
 :root {
-
     --grid-template-columns: ;
     --grid-template-rows: ;
+   
+
 }
 #settings {
     text-align: center;
 
 }
 
+h1 {
+
+    text-align: center;
+}
+
+
 .grid-container {
-
     display: grid;
-    max-width: 100%;
-    max-height: 100%;
+    /*max-width: auto;
+    max-height: auto; */
     background: #eeeeee;
-    row-gap: 2.5px;
-    column-gap: 2.5px;
-    padding-bottom: 100%;
-    grid-template-columns: repeat(16, 100px);
-    grid-template-rows: repeat(16, 100px);
-
+    row-gap: 5px;
+    column-gap: 5px; 
+    padding-bottom: 25%;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto); 
+    align-content: center;
     }
 
+    .grid
     }
-    
     .permanent-color {
         background-color: green !important;
         
