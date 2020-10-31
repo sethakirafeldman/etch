@@ -20,20 +20,20 @@ h1 {
     text-align: center;
 }
 
-
 .grid-container {
     display: grid;
-    max-width: auto;
+    max-width: 500px;
     max-height: auto; 
-    background: #eeeeee;
-    row-gap: 5px;
-    column-gap: 5px; 
-    grid-template-columns: repeat(16, 25px);
-    grid-template-rows: repeat(16, 25px); 
-    align-self: center;
+    background: black;
+    grid-gap: 5px;
+    grid-template-columns: repeat(16, minmax(25px, 1fr));
+    grid-template-rows: repeat(16, minmax(25px, 1fr));
+    /*
+    grid-template-rows: repeat(16, 25px); */
+    justify-content: center;
+
+  
 }
-
-
     .permanent-color {
         background-color: green !important;
         

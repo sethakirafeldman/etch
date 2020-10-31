@@ -32,6 +32,7 @@ function buildDivs() {
             gridDiv.setAttribute("onmouseenter", "getElemId(this)");
             let divClass = document.getElementsByClassName("grid-container")[0];
             divClass.appendChild(gridDiv);
+            
                 };
             };
 
@@ -42,16 +43,16 @@ function getDimensions(value) {
         if (value <= 100) { 
         // change default to prompt value
         changeGridSize(value);
+        console.log("grid is set to " + value);
         }
         else {
             console.log("select a value under 100.")
         }
 };    
-
 function changeGridSize(value) {
-
+    //grid-template-columns: repeat(16, minmax(25px, 1fr));
+    //cssDimensions = 'repeat(' + value + ',minmax(25px, 1fr))';
     cssDimensions = 'repeat(' + value + ', 25px)';
-    //cssDimensions = 'repeat(' + value + '1fr)'; 
     let container = document.getElementById("containerID");
     container.style.setProperty('grid-template-columns', cssDimensions);
     container.style.setProperty('grid-template-rows', cssDimensions);
