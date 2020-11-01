@@ -1,36 +1,48 @@
-
-
 :root {
     --grid-template-columns: ;
     --grid-template-rows: ;
-   
-
-}
-#settings {
-    text-align: center;
-
 }
 
 body {
     background-color: whitesmoke;
-
 }
+
+
 h1 {
 
     text-align: center;
 }
 
+ button {
+     border-radius: 30px;
+    background-color: whitesmoke;
+    padding: 15px;
+    text-align: center;
+    align-content: center;
+    display: block;
+    max-width: 300px;
+    margin: 4 px 2px;
+    cursor: pointer;
+    
+    
+ }
+
+.flex-container {
+    border: 10px whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .grid-container {
     display: grid;
     max-width: 500px;
-    max-height: auto; 
+    max-height: 500px; 
     background: black;
     grid-gap: 5px;
-    grid-template-columns: repeat(16, minmax(25px, 1fr));
-    grid-template-rows: repeat(16, minmax(25px, 1fr));
-    /*
-    grid-template-rows: repeat(16, 25px); */
-    justify-content: center;
+    grid-template-columns: repeat(16, 25px);
+    grid-template-rows: repeat(16, 25px);
 
   
 }
