@@ -1,8 +1,6 @@
 // create divs until length is 32. 16 x 16 grid. style divs with css.
 //https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
 
-let value = "16";
-let gridDimensions = value * value;
 let num = 0;
 
 //default dimension value.
@@ -16,18 +14,19 @@ function getElemId(obj) {
     };
 
 //works to create divs. called Onload from html.
-function buildDivs() {
+function buildDivs(value) {
+    gridDimensions = value * value;
     for (let i = 0; i < gridDimensions; i++) {
     createDiv(gridDimensions);
 
     //creates div in DOM.
-        function createDiv () {
+        function createDiv() {
             let divSuffix = "-" + num++;
             //div held in gridDiv
             let gridDiv = document.createElement("div");
             gridDiv.setAttribute("class", 'grid-item');
             gridDiv.setAttribute("id", "square"+ divSuffix);
-            //changeGridSize();
+            console.log("There are "+ gridDimensions + " divs");
             gridDiv.style.backgroundColor="white";
             gridDiv.setAttribute("onmouseenter", "getElemId(this)");
             let divClass = document.getElementsByClassName("grid-container")[0];
@@ -50,12 +49,14 @@ function getDimensions(value) {
         }
 };    
 function changeGridSize(value) {
-    //grid-template-columns: repeat(16, minmax(25px, 1fr));
-    //cssDimensions = 'repeat(' + value + ',minmax(25px, 1fr))';
-    cssDimensions = 'repeat(' + value + ', 25px)';
+    gridDimensions = value * value;
+    cssDimensions = "repeat(" + value + ", 1em) " + "/ repeat(" + value + ", 1em)";
+    //cssDimensions = 'repeat(' + value + ', 1em)';
     let container = document.getElementById("containerID");
-    container.style.setProperty('grid-template-columns', cssDimensions);
-    container.style.setProperty('grid-template-rows', cssDimensions);
+    console.log("There are "+ gridDimensions + " divs");
+    container.style.setProperty('grid-template', cssDimensions);
+    //container.style.setProperty('grid-template-columns', cssDimensions);
+    //container.style.setProperty('grid-template-rows', cssDimensions);
     buildDivs(value + container);
 };
 
