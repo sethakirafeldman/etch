@@ -57,7 +57,7 @@ function changeGridSize(value) {
     container.style.setProperty('grid-template', cssDimensions);
     //container.style.setProperty('grid-template-columns', cssDimensions);
     //container.style.setProperty('grid-template-rows', cssDimensions);
-    buildDivs(value + container);
+    buildDivs(value);
 };
 
      
