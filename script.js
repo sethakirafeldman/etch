@@ -1,4 +1,3 @@
-// create divs until length is 32. 16 x 16 grid. style divs with css.
 //https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
 
 let num = 0;
@@ -47,11 +46,14 @@ function getDimensions(value) {
         else {
             console.log("select a value under 100.")
         }
-};    
+};  
+// value not passing into create divs properly. creates minimum of 16 x 16 currently  
 function changeGridSize(value) {
     gridDimensions = value * value;
-    cssDimensions = "repeat(" + value + ", 1em) " + "/ repeat(" + value + ", 1em)";
-    //cssDimensions = 'repeat(' + value + ', 1em)';
+    let minMax = ', minmax(6.25px, 75px))';
+    //cssDimensions = "repeat(" + value + ", 1em) " + "/ repeat(" + value + ", 1em)";
+    cssDimensions = "repeat(" + value + minMax + " / repeat(" + value + minMax;
+    console.log(cssDimensions);
     let container = document.getElementById("containerID");
     console.log("There are "+ gridDimensions + " divs");
     container.style.setProperty('grid-template', cssDimensions);

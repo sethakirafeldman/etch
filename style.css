@@ -36,12 +36,11 @@ h1 {
 
 .grid-container {
     display: grid;
-    max-width: auto;
-    max-height: auto; 
+    /*max-width: auto;
+    max-height: auto; */
     background: black;
-    grid-gap: .25em; 
-    grid-template: repeat(16, 1em) / repeat(16, 1em);
-  
+    grid-gap: .125em; 
+    grid-template: repeat(16, minmax(10px, 25px)) / repeat(16, minmax(10px, 25px));
 }
 
     .permanent-color {
