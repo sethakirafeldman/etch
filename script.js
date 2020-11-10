@@ -1,6 +1,5 @@
 //https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
 
-let num = 0;
 
 //default dimension value.
 
@@ -13,21 +12,19 @@ function getElemId(obj) {
     };
 
 function clearDiv() {
-    let removeDiv = document.querySelectorAll(".grid-item")
+    let gridNode = document.getElementById("containerID");
+    gridNode.querySelectorAll('*').forEach(n => n.remove());
     //let removeDiv = document.getElementsByClassName("grid-item");
-    console.log(removeDiv);
-    // remove method not working. try iterating through to remove divs by id/square #. 
-    for ( ) {
-
-
-    }
-};    
+    console.log(gridNode);
+    // remove method not working. try iterating through to remove divs by id/square #.     
+};   
 
  
 //works to create divs. called Onload from html. 
 function buildDivs(value) {
 
-    function createDiv() {
+    function createDiv(gridDimensions) {
+        var  num = 0;
         let divSuffix = "-" + num++;
         //div held in gridDiv
         let gridDiv = document.createElement("div");
@@ -44,32 +41,17 @@ function buildDivs(value) {
     if ( value < 16 ) {
         console.log("value is less than 16");
         gridDimensions = value * value;
-        for ( let i = gridDimensions; i > 0; i-- ) {
-         clearDiv(gridDimensions);   
+        clearDiv();
+        for ( let i = 0; i < gridDimensions; i++ ) {
+        createDiv(gridDimensions); 
         }
-
     }
-
-     else {
+      else {
 
         gridDimensions = value * value;
         for (let i = 0; i < gridDimensions; i++) {
         createDiv(gridDimensions); 
-
-        /*creates div in DOM.
-            function createDiv() {
-                let divSuffix = "-" + num++;
-                //div held in gridDiv
-                let gridDiv = document.createElement("div");
-                gridDiv.setAttribute("class", 'grid-item');
-                gridDiv.setAttribute("id", "square"+ divSuffix);
-                console.log("There are "+ gridDimensions + " divs");
-                gridDiv.style.backgroundColor="white";
-                gridDiv.setAttribute("onmouseenter", "getElemId(this)");
-                let divClass = document.getElementsByClassName("grid-container")[0];
-                divClass.appendChild(gridDiv);
-            } */
-                   };
+                            };
            }; 
 
     };    
@@ -96,7 +78,7 @@ function changeGridSize(value) {
     console.log("(changeGridSize())There are "+ gridDimensions + " divs");
     container.style.setProperty('grid-template', cssDimensions);
     buildDivs(value);
-
+    
 
 };
 
