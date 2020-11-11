@@ -19,13 +19,13 @@ function clearDiv() {
     // remove method not working. try iterating through to remove divs by id/square #.     
 };   
 
- 
 //works to create divs. called Onload from html. 
 function buildDivs(value) {
 
-    function createDiv(gridDimensions) {
+    function createDiv(value) {
         var  num = 0;
         let divSuffix = "-" + num++;
+        gridDimensions = value * value;
         //div held in gridDiv
         let gridDiv = document.createElement("div");
         gridDiv.setAttribute("class", 'grid-item');
@@ -40,18 +40,17 @@ function buildDivs(value) {
 //clears extra divs.
     if ( value < 16 ) {
         console.log("value is less than 16");
-        gridDimensions = value * value;
         clearDiv();
+        gridDimensions = value * value;
         for ( let i = 0; i < gridDimensions; i++ ) {
-        createDiv(gridDimensions); 
+        createDiv(value); 
         }
     }
       else {
-
         gridDimensions = value * value;
         for (let i = 0; i < gridDimensions; i++) {
-        createDiv(gridDimensions); 
-                            };
+        createDiv(value); 
+                    };
            }; 
 
     };    
@@ -72,7 +71,7 @@ function getDimensions(value) {
 // value not passing into create divs properly. creates minimum of 16 x 16 currently  
 function changeGridSize(value) {
     gridDimensions = value * value;
-    let minMax = ', minmax(6.25px, 75px))';
+    let minMax = ', minmax(1.25px, 75px))';
     cssDimensions = "repeat(" + value + minMax + " / repeat(" + value + minMax;
     let container = document.getElementById("containerID");
     console.log("(changeGridSize())There are "+ gridDimensions + " divs");
