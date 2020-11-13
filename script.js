@@ -5,6 +5,7 @@
 
 // feeling stuck. going back to tutorials. need to figure out centering grids and grid size constant.
 
+value = 16;
 //changes class of selected div to change color.
 function getElemId(obj) {
     let selectedSquare = obj;
@@ -76,7 +77,6 @@ function changeGridSize(value) {
     cssDimensions = cssHeight +" / " + cssWidth;
     console.log(cssDimensions);
     let container = document.getElementById("containerID");
-    console.log("(changeGridSize())There are "+ gridDimensions + " divs");
     container.style.setProperty('grid-template', cssDimensions);
     buildDivs(value);
     

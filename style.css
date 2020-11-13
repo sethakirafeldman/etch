@@ -26,16 +26,18 @@ h1 {
     flex-direction: column;
     align-items: center; 
     
-}
+} 
 
 .grid-container {
     display: grid;
-    background: black;
-    row-gap: .25em;
-    column-gap: .25em;
-    width: 500px;
-    height: 500px;
-    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+    background: blue;
+    row-gap: .25%;
+    column-gap: .25%;
+    width: 480px;
+    height: 480px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-areas: none;
 
 }
 
