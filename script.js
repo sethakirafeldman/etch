@@ -71,8 +71,10 @@ function getDimensions(value) {
 // value not passing into create divs properly. creates minimum of 16 x 16 currently  
 function changeGridSize(value) {
     gridDimensions = value * value;
-    let minMax = ', minmax(1.25px, 75px))';
-    cssDimensions = "repeat(" + value + minMax + " / repeat(" + value + minMax;
+    cssHeight = "repeat(" + value + ', 1fr)'; 
+    cssWidth = "repeat(" + value + ', 1fr)'; 
+    cssDimensions = cssHeight +" / " + cssWidth;
+    console.log(cssDimensions);
     let container = document.getElementById("containerID");
     console.log("(changeGridSize())There are "+ gridDimensions + " divs");
     container.style.setProperty('grid-template', cssDimensions);

@@ -25,15 +25,17 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center; 
+    
 }
 
 .grid-container {
     display: grid;
     background: black;
-    height: 100%;
     row-gap: .25em;
-    column-gap: .25em; 
-    grid-template: repeat(16, minmax(10px, 25px)) / repeat(16, minmax(10px, 25px));
+    column-gap: .25em;
+    width: 500px;
+    height: 500px;
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
 
 }
 
