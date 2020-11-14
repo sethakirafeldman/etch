@@ -38,7 +38,10 @@ function buildDivs(value) {
         divClass.appendChild(gridDiv);
     };
 
-//clears extra divs.
+    
+
+//clears extra divs. 
+
     if ( value < 16 ) {
         console.log("value is less than 16");
         clearDiv();
@@ -48,14 +51,13 @@ function buildDivs(value) {
         }
     }
       else {
+        clearDiv();
         gridDimensions = value * value;
         for (let i = 0; i < gridDimensions; i++) {
         createDiv(value); 
                     };
-           }; 
-
+            }; */
     };    
-
 
        // values pass into css @ :root      
 function getDimensions(value) {
@@ -79,7 +81,6 @@ function changeGridSize(value) {
     let container = document.getElementById("containerID");
     container.style.setProperty('grid-template', cssDimensions);
     buildDivs(value);
-    
 
 };
 
