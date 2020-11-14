@@ -1,12 +1,8 @@
 //https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
 
-
-//default dimension value.
-
-// feeling stuck. going back to tutorials. need to figure out centering grids and grid size constant.
-
-value = 16;
 //changes class of selected div to change color.
+value = "16";
+
 function getElemId(obj) {
     let selectedSquare = obj;
     selectedSquare.setAttribute("class", "permanent-color");
@@ -15,14 +11,10 @@ function getElemId(obj) {
 function clearDiv() {
     let gridNode = document.getElementById("containerID");
     gridNode.querySelectorAll('*').forEach(n => n.remove());
-    //let removeDiv = document.getElementsByClassName("grid-item");
-    console.log(gridNode);
-    // remove method not working. try iterating through to remove divs by id/square #.     
 };   
 
 //works to create divs. called Onload from html. 
 function buildDivs(value) {
-
     function createDiv(value) {
         var  num = 0;
         let divSuffix = "-" + num++;
@@ -38,37 +30,44 @@ function buildDivs(value) {
         divClass.appendChild(gridDiv);
     };
 
-    
-
 //clears extra divs. 
 
-    if ( value < 16 ) {
-        console.log("value is less than 16");
+    if ( value <= 100 ) {
+    
         clearDiv();
         gridDimensions = value * value;
         for ( let i = 0; i < gridDimensions; i++ ) {
         createDiv(value); 
         }
     }
+
+    else if ( value > 100) {
+        console.log("value is more than 100")       
+    }
       else {
-        clearDiv();
-        gridDimensions = value * value;
-        for (let i = 0; i < gridDimensions; i++) {
-        createDiv(value); 
-                    };
-            }; */
-    };    
+        
+        console.log("nothing selected, returned to default");
+                    }
+            }; 
+        
 
        // values pass into css @ :root      
 function getDimensions(value) {
-    value = window.prompt("Enter a number", "");
+        
+        value = window.prompt("Enter a number", "");
         if (value <= 100) { 
         // change default to prompt value
         changeGridSize(value);
         //console.log("(getDimensions()) grid is set to " + value);
         }
+
+        else if ( value = "" || value === null || value === "null" ) {
+            console.log(value);
+            console.log("NO VALUE SELECTED");    
+        }
+
         else {
-            console.log("select a value under 100.")
+            console.log("Please select a value under 100");
         }
 };  
 // value not passing into create divs properly. creates minimum of 16 x 16 currently  
@@ -77,7 +76,6 @@ function changeGridSize(value) {
     cssHeight = "repeat(" + value + ', 1fr)'; 
     cssWidth = "repeat(" + value + ', 1fr)'; 
     cssDimensions = cssHeight +" / " + cssWidth;
-    console.log(cssDimensions);
     let container = document.getElementById("containerID");
     container.style.setProperty('grid-template', cssDimensions);
     buildDivs(value);
