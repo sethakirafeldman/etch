@@ -4,18 +4,31 @@
         <link rel="stylesheet" href="style.css">
     </head>
 <body onload="buildDivs(16)">
-
+  
     <div class= "flex-container">
-
+    
     <h1 id="title">Etch</h1>
-      <button onclick="getDimensions(value)">Choose Dimensions</button>
-        <button onclick="changeGridSize(16)">16 x 16</button>
-        <button onclick="changeGridSize(24)">24 x 24</button>
-        <button onclick="changeGridSize(36)">24 x 24</button>
-    <div class="grid-container" id ="containerID">
-
+    <div class="slidecontainer">
+        <input type="range" min= "1" max="100" value= "16" class = "slider" id ="myRange">
     </div>
+    <div class="button-parent">
+        <button onclick="getDimensions(value)">Custom</button>
+          <button onclick="changeGridSize(4)">4 x 4</button>
+          <button onclick="changeGridSize(8)">8 x 8</button>
+          <button onclick="changeGridSize(16)">16 x 16</button>
+          <button onclick="changeGridSize(24)">24 x 24</button>
+          <button onclick="changeGridSize(32)">32 X 32</button>
+          <button onclick="changeGridSize(40)">40 X 40</button>
+          <button onclick="changeGridSize(48)">48 X 48</button>
+          <button onclick="changeGridSize(56)">56 X 56</button>
+      </div>   
+
+    <div class="grid-container" id ="containerID">
+     
+    </div>
+ 
 </div>
+
 </body>
 
 

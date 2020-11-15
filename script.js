@@ -3,6 +3,9 @@
 //changes class of selected div to change color.
 value = "16";
 
+let slider = document.getElementById("myRange");
+slider.oninput = changeGridSize(value);
+
 function getElemId(obj) {
     let selectedSquare = obj;
     selectedSquare.setAttribute("class", "permanent-color");
@@ -22,7 +25,7 @@ function buildDivs(value) {
         //div held in gridDiv
         let gridDiv = document.createElement("div");
         gridDiv.setAttribute("class", 'grid-item');
-        gridDiv.setAttribute("id", "square"+ divSuffix);
+        gridDiv.setAttribute("id", "square" + divSuffix);
         console.log("There are "+ gridDimensions + " divs");
         gridDiv.style.backgroundColor="white";
         gridDiv.setAttribute("onmouseenter", "getElemId(this)");
@@ -42,7 +45,7 @@ function buildDivs(value) {
     }
 
     else if ( value > 100) {
-        console.log("value is more than 100")       
+        //console.log("value is more than 100");   
     }
       else {
         
@@ -67,7 +70,9 @@ function getDimensions(value) {
         }
 
         else {
-            console.log("Please select a value under 100");
+            //console.log("Please select a value under 100");
+            alert("Please select a value under 100");
+
         }
 };  
 // value not passing into create divs properly. creates minimum of 16 x 16 currently  
