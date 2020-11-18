@@ -1,15 +1,20 @@
 //https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
 
 //changes class of selected div to change color.
-value = "16";
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+var slider = document.getElementById("slider");
+var selector = document.getElementById("selector");
 
 slider.oninput = function() {
-    output.innerHTML = this.value;
-}
+    selector.style.left = this.value;
+};
+
+
+
+value = "16";
+
+
+
 
 function getElemId(obj) {
     let selectedSquare = obj;
