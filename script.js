@@ -3,8 +3,13 @@
 //changes class of selected div to change color.
 value = "16";
 
-let slider = document.getElementById("myRange");
-slider.oninput = changeGridSize(value);
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
 
 function getElemId(obj) {
     let selectedSquare = obj;
