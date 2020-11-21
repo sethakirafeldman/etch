@@ -9,12 +9,7 @@ slider.oninput = function() {
     selector.style.left = this.value;
 };
 
-
-
-value = "16";
-
-
-
+    value = "16";
 
 function getElemId(obj) {
     let selectedSquare = obj;
@@ -28,6 +23,7 @@ function clearDiv() {
 
 //works to create divs. called Onload from html. 
 function buildDivs(value) {
+
     function createDiv(value) {
         var  num = 0;
         let divSuffix = "-" + num++;
@@ -41,27 +37,28 @@ function buildDivs(value) {
         gridDiv.setAttribute("onmouseenter", "getElemId(this)");
         let divClass = document.getElementsByClassName("grid-container")[0];
         divClass.appendChild(gridDiv);
+        
     };
 
-//clears extra divs. 
+    //clears extra divs. 
 
     if ( value <= 100 ) {
-    
-        clearDiv();
-        gridDimensions = value * value;
+        
+    clearDiv();
+    gridDimensions = value * value;
         for ( let i = 0; i < gridDimensions; i++ ) {
         createDiv(value); 
         }
     }
 
     else if ( value > 100) {
-        //console.log("value is more than 100");   
+    //console.log("value is more than 100");   
     }
-      else {
-        
-        console.log("nothing selected, returned to default");
-                    }
-            }; 
+    else {
+            
+    console.log("nothing selected, returned to default");
+    }
+}; 
         
 
        // values pass into css @ :root      
