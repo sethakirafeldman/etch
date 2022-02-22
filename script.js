@@ -1,15 +1,9 @@
-//https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project
-
 //changes class of selected div to change color.
-
-var slider = document.getElementById("slider");
 var selector = document.getElementById("selector");
 
-slider.oninput = function() {
-    selector.style.left = this.value;
-};
+var slider = document.getElementById("slider");
 
-    value = "16";
+value = "16";
 
 function getElemId(obj) {
     let selectedSquare = obj;
@@ -21,7 +15,7 @@ function clearDiv() {
     gridNode.querySelectorAll('*').forEach(n => n.remove());
 };   
 
-//works to create divs. called Onload from html. 
+//creates Divs. Called in html.
 function buildDivs(value) {
 
     function createDiv(value) {
@@ -41,9 +35,7 @@ function buildDivs(value) {
     };
 
     //clears extra divs. 
-
-    if ( value <= 100 ) {
-        
+    if ( value <= 100 ) { 
     clearDiv();
     gridDimensions = value * value;
         for ( let i = 0; i < gridDimensions; i++ ) {
@@ -52,7 +44,6 @@ function buildDivs(value) {
     }
 
     else if ( value > 100) {
-    //console.log("value is more than 100");   
     }
     else {
             
@@ -61,29 +52,26 @@ function buildDivs(value) {
 }; 
         
 
-       // values pass into css @ :root      
+// values pass into css at root      
 function getDimensions(value) {
         
         value = window.prompt("Enter a number", "");
         if (value <= 100) { 
         // change default to prompt value
         changeGridSize(value);
-        //console.log("(getDimensions()) grid is set to " + value);
         }
 
         else if ( value = "" || value === null || value === "null" ) {
-            console.log(value);
             console.log("NO VALUE SELECTED");    
         }
 
         else {
-            //console.log("Please select a value under 100");
             alert("Please select a value under 100");
-
         }
 };  
-// value not passing into create divs properly. creates minimum of 16 x 16 currently  
+
 function changeGridSize(value) {
+    slider.value = value;
     gridDimensions = value * value;
     cssHeight = "repeat(" + value + ', 1fr)'; 
     cssWidth = "repeat(" + value + ', 1fr)'; 
@@ -91,7 +79,8 @@ function changeGridSize(value) {
     let container = document.getElementById("containerID");
     container.style.setProperty('grid-template', cssDimensions);
     buildDivs(value);
-
 };
 
-     
+slider.addEventListener("change", () => {
+    changeGridSize(slider.value);
+});

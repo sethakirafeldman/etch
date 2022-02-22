@@ -12,12 +12,13 @@ h1 {
 
     text-align: left;
     align-items: left;
-    background-color: teal;
+    background-color: transparent;
     position: absolute;
     left: 10px;
     top: 100px;
     width: auto;
     height: auto;
+    border-style: solid;
 
 }
 
@@ -29,8 +30,8 @@ h1 {
     max-width: 300px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: peru;
-    color: blanchedalmond;
+    background-color: black;
+    color: white;
     text-size-adjust: 20pt;
     font-size: 30px;
       
@@ -62,16 +63,14 @@ h1 {
     column-gap: 1px; 
     grid-template-areas: none;
     cursor: crosshair;
-
-
 }
 
     .permanent-color {
-        background-color: teal !important;
+        background-color: black !important;
         
             }
             
     .grid-item:hover {
-        background-color: teal !important;
+        background-color: black !important;
     }
 
