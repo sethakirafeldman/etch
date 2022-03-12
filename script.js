@@ -26,7 +26,7 @@ function buildDivs(value) {
         let gridDiv = document.createElement("div");
         gridDiv.setAttribute("class", 'grid-item');
         gridDiv.setAttribute("id", "square" + divSuffix);
-        console.log("There are "+ gridDimensions + " divs");
+        // console.log("There are "+ gridDimensions + " divs");
         gridDiv.style.backgroundColor="white";
         gridDiv.setAttribute("onmouseenter", "getElemId(this)");
         let divClass = document.getElementsByClassName("grid-container")[0];

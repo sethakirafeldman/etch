@@ -8,6 +8,15 @@ h1 {
     text-align: center;
 }
 
+#slider {
+    /* appearance: none; */
+    width: 100%; 
+    background: white; 
+    outline: none; 
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
 .button-parent {
 
     text-align: left;
@@ -18,20 +27,20 @@ h1 {
     top: 100px;
     width: auto;
     height: auto;
-    border-style: solid;
+    border-style: ridge;
 
 }
 
  button {
-    border-radius: 30px;
-    background-color: whitesmoke;
+
+    border-style: ridge;
     text-align: center;
     display: block;
     max-width: 300px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: black;
-    color: white;
+    color: black;
+    background-color: white;
     text-size-adjust: 20pt;
     font-size: 30px;
       
@@ -39,7 +48,6 @@ h1 {
 
  div {
     box-sizing: border-box;
-
 }
 
 .flex-container {
