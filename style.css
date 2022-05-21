@@ -9,7 +9,6 @@ h1 {
 }
 
 #slider {
-    /* appearance: none; */
     width: 100%; 
     background: white; 
     outline: none; 
@@ -77,8 +76,10 @@ h1 {
         background-color: black !important;
         
             }
-            
-    .grid-item:hover {
+    
+    @media(.grid-item:hover) and (pointer:fine) {
+        
+    .grid-item:hover, .grid-item:active{
         background-color: black !important;
     }
-
+    }    
